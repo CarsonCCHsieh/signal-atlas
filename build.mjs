@@ -46,7 +46,7 @@ ${bi('Skip to content','跳至主要內容','a','class="skip-link" href="#main"'
 <main id="main">
  <section class="hero wrap" aria-labelledby="hero-title">
   <div class="hero-copy">${bi('CC HSIEH / An evidence-led portfolio','CC HSIEH / 從證據出發的作品集','p','class="eyebrow"')}
-   ${bi('From a question to a testable result.','從一個問題，走向可驗證的成果。','h1','class="display-title" id="hero-title"')}
+   ${bi('From a question to a testable result.','從問題出發，讓成果可驗證。','h1','class="display-title" id="hero-title"')}
    ${bi('I build AI-assisted experiments across science, software and shared experiences. Each project here shows what was made, what was observed, and what remains uncertain.','我以 AI 協助探索科學、軟體與共同參與的體驗。每件作品都記下做了什麼、觀察到什麼，以及還有哪些未知。','p','class="lede"')}
    <div class="hero-actions"><a class="button button-primary" href="#work">${bi('Explore six field notes','探索六篇作品筆記')} <span aria-hidden="true">↓</span></a><a class="button button-text" href="#about">${bi('About this practice','關於創作方式')} <span aria-hidden="true">↗</span></a></div>
   </div>

@@ -150,6 +150,7 @@ main, section, article, .hero-copy, .atlas-panel, .about-copy, .method-intro,
   line-height: 1.13;
   letter-spacing: -.045em;
 }
+.title-line { display: block; }
 .lede {
   max-width: 40rem;
   margin-bottom: 2rem;
@@ -372,7 +373,7 @@ main, section, article, .hero-copy, .atlas-panel, .about-copy, .method-intro,
   .language-switch { padding-inline: .55rem; }
   .hero { grid-template-columns: 1fr; gap: 2.5rem; padding-block: 3rem 2.5rem; }
   .display-title { max-width: 12ch; font-size: clamp(3.3rem, 12vw, 5.5rem); }
-  :lang(zh) .display-title { font-size: clamp(3rem, 11vw, 5rem); }
+  :lang(zh) .display-title { font-size: clamp(2.375rem, 10vw, 5rem); }
   .lede { max-width: 34rem; }
   .atlas-panel { max-width: 36rem; width: 100%; justify-self: end; }
   .atlas-graphic { width: min(100%, 29rem); margin-inline: auto; }

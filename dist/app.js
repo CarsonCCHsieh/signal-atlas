@@ -53,6 +53,7 @@
     document.documentElement.lang = next === 'zh' ? 'zh-Hant' : 'en';
     document.title = words('SIGNAL ATLAS — CC HSIEH','訊號圖譜 — CC HSIEH');
     document.querySelectorAll('[data-en][data-zh]').forEach(element => { element.textContent = element.dataset[next]; });
+    if (next === 'zh') document.querySelector('.display-title').replaceChildren(...['從問題出發，','讓成果可驗證。'].map(line => make('span','title-line',line)));
     document.querySelectorAll('.language-switch').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.lang === next)));
     document.querySelectorAll('[data-project-url]').forEach(link => { link.href = publicUrl(byId.get(link.dataset.projectUrl).url); });
     filters.setAttribute('aria-label',words('Filter projects','篩選作品'));
@@ -86,6 +87,13 @@
       openCase(project, link);
     }));
     dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('keydown', event => {
+      if (event.key !== 'Tab') return;
+      const controls = Array.from(dialog.querySelectorAll('button:not(:disabled),a[href]')).filter(element => element.getClientRects().length);
+      const first = controls[0], last = controls.at(-1);
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    });
     dialog.addEventListener('click',event => { if (event.target === dialog) { const rect=dialog.getBoundingClientRect(); if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom) dialog.close(); } });
     dialog.addEventListener('close',()=>{
       if (activeProject && location.hash === `#case-${activeProject.id}`) {
