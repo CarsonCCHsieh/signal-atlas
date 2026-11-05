@@ -29,3 +29,7 @@ All asset paths are relative, including deployment below a GitHub Pages reposito
 CC HSIEH directed the projects and this portfolio with AI-assisted research, implementation and review. This repository records actual new portfolio development; it does not reconstruct or backdate the histories of the featured projects. Linked upstream and project repositories retain their own licenses. This portfolio does not relicense those materials.
 
 Only the scoped files in this repository are intended for public release. Private evidence, review receipts and publication approvals remain outside Git history.
+
+## GitHub Pages publication
+
+The `main` branch contains the portfolio source and genuine development history. The `gh-pages` branch publishes the reviewed contents of `dist/` at its root, including `.nojekyll`, using GitHub Pages branch publishing. The deployment does not require a custom workflow file, a secret or a broader GitHub OAuth scope. A successful push is recorded separately from the live-site verification.
