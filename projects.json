@@ -1,0 +1,317 @@
+{
+  "asOf": "2026-11-05",
+  "projects": [
+    {
+      "id": "contextweave",
+      "number": "01",
+      "name": {
+        "en": "ContextWeave",
+        "zh": "細胞織譜"
+      },
+      "category": "science",
+      "discipline": {
+        "en": "Perturb-seq · cross-context prediction",
+        "zh": "Perturb-seq · 跨背景細胞預測"
+      },
+      "summary": {
+        "en": "Transfer public perturbation effects into context-specific control cells, with explicit coverage and validation limits.",
+        "zh": "將公開基因擾動效應轉移至各背景對照細胞，明列模型涵蓋範圍與驗證限制。"
+      },
+      "question": {
+        "en": "How can a low-cost model predict perturbed cells when final biological contexts are anonymous?",
+        "zh": "當決賽生物背景匿名時，如何用低成本模型產生擾動後的細胞預測？"
+      },
+      "approach": {
+        "en": "AI-assisted implementation combines public Perturb-seq mean effects with each context’s own controls. A streamed generator and validator handle the final count matrix without loading it all into memory.",
+        "zh": "以 AI 協助實作，結合公開 Perturb-seq 平均效應與各背景自身對照；採串流生成與驗證，避免將完整計數矩陣一次載入記憶體。"
+      },
+      "outcome": {
+        "en": "Generated 360,000 predicted cells for the Virtual Cell Challenge 2026 final. The single final submission reached the official published terminal state without an error; no official score or rank is available.",
+        "zh": "為 Virtual Cell Challenge 2026 決賽產生 360,000 個預測細胞。單次決賽投稿已達官方 published 終態、無錯誤；官方尚未提供分數與排名。"
+      },
+      "limitation": {
+        "en": "Direct support covers 277/300 targets and 7,681/18,533 genes. The remaining 23 targets and 10,852 genes have zero learned effect; a separate 0.1 own-target prior is applied. Shared effects are not learned final-context specificity. Full biological covariance is unvalidated; local proxy improvement is not an official score or clinical evidence.",
+        "zh": "直接支持涵蓋 277/300 個目標及 7,681/18,533 個基因；其餘 23 個目標、10,852 個基因為零學得效應，自身目標另用 0.1 先驗。共用效應不代表學得決賽背景差異；完整生物協方差未驗證，本機代理改善不是官方分數或臨床證據。"
+      },
+      "status": {
+        "en": "Final submission processed · score and rank unavailable",
+        "zh": "決賽投稿處理完成 · 尚無官方分數與排名"
+      },
+      "metric": {
+        "value": "360,000",
+        "label": {
+          "en": "predicted cells generated",
+          "zh": "已產生的預測細胞"
+        }
+      },
+      "url": "https://microusada.com/demos/contextweave/",
+      "sourceUrl": null,
+      "tags": [
+        "AI-assisted",
+        "Python",
+        "Perturb-seq",
+        "Streaming validation"
+      ]
+    },
+    {
+      "id": "enveda-casmi26",
+      "number": "02",
+      "name": {
+        "en": "Enveda CASMI26",
+        "zh": "Enveda 質譜識分子"
+      },
+      "category": "science",
+      "discipline": {
+        "en": "Mass spectrometry · molecular retrieval",
+        "zh": "質譜分析 · 分子結構檢索"
+      },
+      "summary": {
+        "en": "A CPU retrieval baseline that connects measured mass spectra to candidate molecular structures.",
+        "zh": "以 CPU 檢索基準，將質譜觀測對應至候選分子結構。"
+      },
+      "question": {
+        "en": "How can exact mass and spectral similarity narrow a molecular-structure search?",
+        "zh": "如何結合精確質量與光譜相似度，縮小分子結構的搜尋範圍？"
+      },
+      "approach": {
+        "en": "AI-assisted implementation filters candidates by exact mass, ranks spectral similarity and deduplicates structures using the official training data.",
+        "zh": "以 AI 協助實作，使用官方訓練資料，依精確質量篩選候選，再按光譜相似度排序並去除重複結構。"
+      },
+      "outcome": {
+        "en": "Version 2 completed official scoring with a Kaggle public score of 0.151 and remains selected as one of the two final slots.",
+        "zh": "Version 2 已完成官方評分，Kaggle 公開分數為 0.151，並保留為兩個 final 名額中的一筆。"
+      },
+      "limitation": {
+        "en": "This is a scored retrieval baseline. The public score is not a final private score, final rank, award or guarantee of chemical identification; challenge data and the private notebook are not redistributed.",
+        "zh": "這是已評分的檢索基準。公開分數不等於最終 private 分數、排名、得獎或化學鑑定保證；不散布競賽資料與私人 Notebook。"
+      },
+      "status": {
+        "en": "V2 scored · final selection 1/2",
+        "zh": "V2 已評分 · final 已選 1/2"
+      },
+      "metric": {
+        "value": "0.151",
+        "label": {
+          "en": "Kaggle public score",
+          "zh": "Kaggle 公開分數"
+        }
+      },
+      "url": "https://microusada.com/competitions/?lang=zh-TW#enveda-title",
+      "sourceUrl": null,
+      "tags": [
+        "AI-assisted",
+        "Python",
+        "CPU retrieval",
+        "Mass spectra"
+      ]
+    },
+    {
+      "id": "smart-buildings",
+      "number": "03",
+      "name": {
+        "en": "Smart Buildings — ZoneGuard",
+        "zh": "智慧建築控溫"
+      },
+      "category": "science",
+      "discipline": {
+        "en": "Building control · simulated evaluation",
+        "zh": "建築控制 · 模擬評估"
+      },
+      "summary": {
+        "en": "Coordinate airflow, reheat and a shared hot-water loop around the needs of individual building zones.",
+        "zh": "依建築分區冷暖需求，協調風量、再熱與共享熱水迴路。"
+      },
+      "question": {
+        "en": "How can a controller balance multiple zones that share heating resources?",
+        "zh": "多個分區共用供熱資源時，如何協調各區的控制需求？"
+      },
+      "approach": {
+        "en": "AI-assisted implementation uses zone heating and cooling demand to adjust airflow and reheat while coordinating the shared hot-water loop in the competition simulator.",
+        "zh": "以 AI 協助實作，在競賽模擬器中依各區冷暖需求調節風量與再熱，並協調共享熱水迴路。"
+      },
+      "outcome": {
+        "en": "The competition submission achieved a Kaggle public score of 0.04881 and is selected for final evaluation (one of two allowed selections).",
+        "zh": "競賽投稿取得 Kaggle 公開分數 0.04881，並已選入最終評估（兩個可選名額中的一筆）。"
+      },
+      "limitation": {
+        "en": "The public score does not establish a final private ranking, an award or measured savings in a real building. This is competition simulation work, not a deployed building controller.",
+        "zh": "公開分數不能證明最終 private 排名、得獎或真實建築節能成效。成果屬競賽模擬，並非已部署的建築控制系統。"
+      },
+      "status": {
+        "en": "Scored · final selection 1/2",
+        "zh": "已評分 · final 已選 1/2"
+      },
+      "metric": {
+        "value": "0.04881",
+        "label": {
+          "en": "Kaggle public score",
+          "zh": "Kaggle 公開分數"
+        }
+      },
+      "url": "https://microusada.com/competitions/?lang=zh-TW#smart-title",
+      "sourceUrl": null,
+      "tags": [
+        "AI-assisted",
+        "Building control",
+        "Simulation",
+        "Zone coordination"
+      ]
+    },
+    {
+      "id": "raidline",
+      "number": "04",
+      "name": {
+        "en": "RAIDLINE",
+        "zh": "雲軌同航"
+      },
+      "category": "systems",
+      "discipline": {
+        "en": "Interactive systems · Twitch community play",
+        "zh": "互動系統 · Twitch 社群協作"
+      },
+      "summary": {
+        "en": "Turn cooperative chat commands into a shared railway journey with memories that carry into the next broadcast.",
+        "zh": "將聊天室合作指令化為共同前行的鐵道旅程，讓站點記憶延續至下一次直播。"
+      },
+      "question": {
+        "en": "How can chat participation leave a shared story beyond a single broadcast?",
+        "zh": "聊天室的參與，如何留下跨越單次直播的共同故事？"
+      },
+      "approach": {
+        "en": "AI-assisted implementation connects chat and raid events to shared game rules, a railway world, broadcast goals and archived chapter memories. A public practice experience makes the interaction explorable without Twitch authorization.",
+        "zh": "以 AI 協助實作，將聊天與 raid 事件接入共用規則、鐵道世界、直播目標及章節記憶；公開練習模式可在不授權 Twitch 的情況下體驗互動。"
+      },
+      "outcome": {
+        "en": "The interactive application is published with English, Traditional Chinese and Japanese interfaces, and the project has a recorded formal competition submission.",
+        "zh": "互動應用已公開，提供英文、繁體中文與日文介面；專案已有正式競賽投稿紀錄。"
+      },
+      "limitation": {
+        "en": "The recorded live test contains four commands from one account. Multi-person relays and incoming raids remain supported by synthetic practice and automated checks, not a verified live community session. No measured engagement gain is claimed.",
+        "zh": "既有真實測試為同一帳號的四筆聊天指令。多人接力與 incoming raid 以合成練習及自動檢查驗證，尚非真實社群連線實證，未宣稱參與度提升。"
+      },
+      "status": {
+        "en": "Published · competition submission recorded",
+        "zh": "已公開 · 已有正式投稿紀錄"
+      },
+      "metric": {
+        "value": "3",
+        "label": {
+          "en": "interface languages",
+          "zh": "介面語言"
+        }
+      },
+      "url": "https://raidline.microusada.com/?lang=en",
+      "sourceUrl": null,
+      "tags": [
+        "AI-assisted",
+        "Twitch",
+        "WebGL",
+        "Community interaction"
+      ]
+    },
+    {
+      "id": "versionpass",
+      "number": "05",
+      "name": {
+        "en": "VERSIONPASS",
+        "zh": "版本簽收"
+      },
+      "category": "systems",
+      "discipline": {
+        "en": "File provenance · delivery and approval",
+        "zh": "檔案溯源 · 交付與核准"
+      },
+      "summary": {
+        "en": "Bind delivery and approval to the exact file bytes, then verify the receipt independently.",
+        "zh": "讓交付與核准對應同一份檔案位元組，並能獨立重新查核收據。"
+      },
+      "question": {
+        "en": "When two files share a name, how do we know which revision was approved?",
+        "zh": "當兩份檔案同名時，如何知道究竟核准了哪個版本？"
+      },
+      "approach": {
+        "en": "AI-assisted implementation compares file fingerprints locally, records delivery and approval on Solana devnet, and exports receipts for independent reimport and verification.",
+        "zh": "以 AI 協助實作，在本機比對檔案摘要，將交付與核准記錄於 Solana devnet，並匯出收據供獨立重新匯入驗證。"
+      },
+      "outcome": {
+        "en": "A real devnet demonstration verified two finalized delivery/approval transactions, a matching original file and rejection of changed bytes under the same filename. Final checkpoint content was submitted once and verified after reload.",
+        "zh": "實際 devnet 示範驗證兩筆 finalized 交付／核准交易、原檔比對成功，以及同名但內容不同的檔案遭拒。Final checkpoint 已提交一次並在重新載入後核實內容。"
+      },
+      "limitation": {
+        "en": "A devnet prototype using synthetic file content and temporary keys. It does not establish legal identity, durable key recovery or mainnet readiness. Saved final fields were verified; no separate submission ID or Submitted badge was observed.",
+        "zh": "這是使用合成檔案與臨時金鑰的 devnet 原型，不代表法律身分、長期金鑰復原或主網就緒。Final 欄位已核實保存，但未觀測到獨立 submission ID 或 Submitted 標記。"
+      },
+      "status": {
+        "en": "Final checkpoint saved · review pending",
+        "zh": "Final checkpoint 已保存 · 等待評審"
+      },
+      "metric": {
+        "value": "2",
+        "label": {
+          "en": "finalized devnet demo transactions",
+          "zh": "已 finalized 的 devnet 示範交易"
+        }
+      },
+      "url": "https://microusada.com/versionpass/",
+      "sourceUrl": "https://github.com/CarsonCCHsieh/versionpass",
+      "tags": [
+        "AI-assisted",
+        "Solana devnet",
+        "File fingerprints",
+        "Receipts"
+      ]
+    },
+    {
+      "id": "abby-vue",
+      "number": "06",
+      "name": {
+        "en": "Abby Vue",
+        "zh": "Abby Vue 整合"
+      },
+      "category": "open-source",
+      "discipline": {
+        "en": "Open-source SDK · Vue integration",
+        "zh": "開源 SDK · Vue 整合"
+      },
+      "summary": {
+        "en": "Typed composables and isolated provider state bring Abby experiments, flags and remote configuration into Vue.",
+        "zh": "以型別化 composables 與隔離 provider 狀態，將 Abby 實驗、功能旗標及遠端設定整合進 Vue。"
+      },
+      "question": {
+        "en": "How can a Vue integration preserve typing and keep provider state isolated across applications?",
+        "zh": "Vue 整合如何保留型別，並避免不同應用程式共用 provider 狀態？"
+      },
+      "approach": {
+        "en": "AI-assisted implementation adds typed composables, application/provider isolation and SSR-safe initialization. The public interactive demonstration uses synthetic data and sends no telemetry.",
+        "zh": "以 AI 協助實作型別化 composables、應用程式／provider 隔離及 SSR 安全初始化；公開互動展示使用合成資料，不傳送遙測。"
+      },
+      "outcome": {
+        "en": "A non-draft upstream contribution was opened as PR #211 with a demonstration and claim. Two recorded review threads were resolved; upstream review and authorization remain external.",
+        "zh": "已提交非 draft 的上游 PR #211、示範與 claim。兩個已記錄的 review 討論均已 resolved；後續上游審查與授權仍由維護者決定。"
+      },
+      "limitation": {
+        "en": "The latest saved evidence records an open, unmerged PR. Merge, release, successful upstream CI and bounty payment are not confirmed.",
+        "zh": "最新既有證據為 open、尚未合併的 PR；未確認 merge、release、上游 CI 全數通過或賞金付款。"
+      },
+      "status": {
+        "en": "PR #211 open · upstream review pending",
+        "zh": "PR #211 open · 等待上游審查"
+      },
+      "metric": {
+        "value": "#211",
+        "label": {
+          "en": "public upstream pull request",
+          "zh": "公開上游 Pull Request"
+        }
+      },
+      "url": "https://github.com/tryabby/abby/pull/211",
+      "sourceUrl": "https://github.com/CarsonCCHsieh/abby/tree/37f07e24c31ae7794fc7fcb8968559312f2af6aa/packages/vue",
+      "tags": [
+        "AI-assisted",
+        "Vue",
+        "TypeScript",
+        "SSR"
+      ]
+    }
+  ]
+}
